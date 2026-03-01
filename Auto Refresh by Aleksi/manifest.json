@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Refresh by Aleksi",
+  "version": "1.0",
+  "description": "Custom timer to refresh pages based on website alias.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

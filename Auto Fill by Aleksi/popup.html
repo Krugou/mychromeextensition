@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Fill Settings</title>
+  <style>
+    body {
+      width: 340px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 15px;
+      margin: 0;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .btn-add {
+      padding: 8px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn-add:hover {
+      background-color: #0069d9;
+    }
+
+    .help-text {
+      font-size: 11px;
+      color: #6c757d;
+      margin-top: -5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rule-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .rule-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      overflow: hidden;
+    }
+
+    .rule-info strong {
+      font-size: 13px;
+      word-break: break-all;
+    }
+
+    .rule-info span {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .btn-delete {
+      padding: 5px 8px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+
+    .btn-delete:hover {
+      background-color: #c82333;
+    }
+
+    .empty-message {
+      font-size: 13px;
+      color: #6c757d;
+      text-align: center;
+      padding: 10px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Auto Fill Settings</h2>
+
+  <div class="form-group">
+    <div style="display: flex; gap: 10px; margin-bottom: 5px;">
+      <select id="fillPreset" style="flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        <option value="">Load Placeholder Templates...</option>
+        <option value="email">Email Input</option>
+        <option value="password">Password Input</option>
+        <option value="search">Search Bar</option>
+        <option value="username">Username Input</option>
+      </select>
+    </div>
+    <input type="text" id="urlPattern" placeholder="URL Pattern (e.g. *://*.google.com/*)">
+    <div class="help-text">Use * as a wildcard for the website.</div>
+    <input type="text" id="cssSelector" placeholder="CSS Selector (e.g. input[name='q'])">
+    <div class="help-text">Tells the extension which field to target.</div>
+    <input type="text" id="fillValue" placeholder="Text to Auto-Fill">
+    <button class="btn-add" id="addRuleBtn">Add Auto Fill Rule</button>
+  </div>
+
+  <ul id="rulesList"></ul>
+  <div id="emptyMessage" class="empty-message">No rules added yet.</div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
