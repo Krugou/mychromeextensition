@@ -55,10 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
               <input type="text" id="editUrl_${index}" class="edit-input" value="${rule.urlPattern}">
               <div style="display: flex; gap: 5px;">
                 <input type="number" id="editTimer_${index}" class="edit-input" value="${rule.timerSeconds}" min="1">
-                <button class="save-edit-btn" onclick="saveEdit(${index})">Save</button>
-                <button class="cancel-edit-btn" onclick="cancelEdit()">Cancel</button>
+                <button class="save-edit-btn">Save</button>
+                <button class="cancel-edit-btn">Cancel</button>
               </div>
             `;
+            info.querySelector('.save-edit-btn').addEventListener('click', () => saveEdit(index));
+            info.querySelector('.cancel-edit-btn').addEventListener('click', () => cancelEdit());
           } else {
             // Normal display
             info.innerHTML = `<strong>${rule.urlPattern}</strong><span>Every ${rule.timerSeconds}s</span>`;
@@ -217,17 +219,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Inline Edit Logic ---
 
-  window.startEdit = function(index) {
+  function startEdit(index) {
     currentlyEditingIndex = index;
     loadRules(); // Trigger re-render to show input boxes
-  };
+  }
 
-  window.cancelEdit = function() {
+  function cancelEdit() {
     currentlyEditingIndex = -1;
     loadRules();
-  };
+  }
 
-  window.saveEdit = function(index) {
+  function saveEdit(index) {
     const urlVal = document.getElementById(`editUrl_${index}`).value.trim();
     const timerVal = parseInt(document.getElementById(`editTimer_${index}`).value, 10);
 
@@ -243,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       alert('Please enter a valid URL pattern and a timer > 0.');
     }
-  };
+  }
 
   loadRules();
 });
