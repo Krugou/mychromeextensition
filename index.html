@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleksi's Chrome Extensions Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --card-bg: #161b22;
+      --text-color: #c9d1d9;
+      --text-muted: #8b949e;
+      --border-color: #30363d;
+      --accent: #58a6ff;
+      --hover-border: #8b949e;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(180deg, rgba(88, 166, 255, 0.1) 0%, transparent 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    h1 {
+      margin: 0 0 1rem 0;
+      font-size: 2.5rem;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .card:hover {
+      border-color: var(--hover-border);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      /* Placeholder if no transparent background */
+      padding: 4px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      color: var(--accent);
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      color: var(--text-color);
+    }
+
+    .card-footer svg {
+      margin-left: 0.5rem;
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      transition: transform 0.2s;
+    }
+
+    .card:hover .card-footer svg {
+      transform: translateX(4px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Aleksi's Chrome Extensions</h1>
+    <p class="subtitle">A collection of custom-built browser extensions designed to improve productivity, accessibility,
+      and the everyday browsing experience.</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+
+      <!-- Aurora Watcher -->
+      <a href="./Aurora Watcher by Aleksi/" class="card">
+        <img src="./Aurora Watcher by Aleksi/icon.png" alt="Icon" class="card-icon"
+          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzlkMWQ5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIxIDE2VjhhMiAyIDAgMCAwLTEtMS43M2wtNy00YTIgMiAwIDAgMC0yIDBsLTcgNGEy 2 0 0 0-1 1.73v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16eiI+PC9wYXRoPjwvc3ZnPg=='">
+        <h2 class="card-title">Aurora Watcher by Aleksi</h2>
+        <p class="card-desc">Opens the Aurora Watcher website upon clicking the extension icon.</p>
+        <div class="card-footer">View Source <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" fill="none" />
+          </svg></div>
+      </a>
+
+      <!-- Auto Fill -->
+      <a href="./Auto Fill by Aleksi/" class="card">
+        <img src="./Auto Fill by Aleksi/icon.png" alt="Icon" class="card-icon"
+          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzlkMWQ5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIxIDE2VjhhMiAyIDAgMCAwLTEtMS43M2wtNy00YTIgMiAwIDAgMC0yIDBsLTcgNGEy 2 0 0 0-1 1.73v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16eiI+PC9wYXRoPjwvc3ZnPg=='">
+        <h2 class="card-title">Auto Fill by Aleksi</h2>
+        <p class="card-desc">Automatically fill specific text inputs on targeted websites.</p>
+        <div class="card-footer">View Source <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" fill="none" />
+          </svg></div>
+      </a>
+
+      <!-- Auto Refresh -->
+      <a href="./Auto Refresh by Aleksi/" class="card">
+        <img src="./Auto Refresh by Aleksi/icon.png" alt="Icon" class="card-icon"
+          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzlkMWQ5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIxIDE2VjhhMiAyIDAgMCAwLTEtMS43M2wtNy00YTIgMiAwIDAgMC0yIDBsLTcgNGEy 2 0 0 0-1 1.73v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16eiI+PC9wYXRoPjwvc3ZnPg=='">
+        <h2 class="card-title">Auto Refresh by Aleksi</h2>
+        <p class="card-desc">Custom timer to refresh pages based on website alias.</p>
+        <div class="card-footer">View Source <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" fill="none" />
+          </svg></div>
+      </a>
+
+      <!-- Emoji Picker -->
+      <a href="./Emoji Picker by Aleksi/" class="card">
+        <img src="./Emoji Picker by Aleksi/icon.png" alt="Icon" class="card-icon"
+          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzlkMWQ5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIxIDE2VjhhMiAyIDAgMCAwLTEtMS43M2wtNy00YTIgMiAwIDAgMC0yIDBsLTcgNGEy 2 0 0 0-1 1.73v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16eiI+PC9wYXRoPjwvc3ZnPg=='">
+        <h2 class="card-title">Emoji Picker by Aleksi</h2>
+        <p class="card-desc">A quick-access popup menu with categorized emojis and kaomojis.</p>
+        <div class="card-footer">View Source <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" fill="none" />
+          </svg></div>
+      </a>
+
+      <!-- Quick Currency Converter -->
+      <a href="./Quick Currency Converter by Aleksi/" class="card">
+        <img src="./Quick Currency Converter by Aleksi/icon.png" alt="Icon" class="card-icon"
+          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzlkMWQ5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIxIDE2VjhhMiAyIDAgMCAwLTEtMS43M2wtNy00YTIgMiAwIDAgMC0yIDBsLTcgNGEy 2 0 0 0-1 1.73v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16eiI+PC9wYXRoPjwvc3ZnPg=='">
+        <h2 class="card-title">Quick Currency Converter by Aleksi</h2>
+        <p class="card-desc">Convert currencies and units quickly without leaving the current tab.</p>
+        <div class="card-footer">View Source <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" fill="none" />
+          </svg></div>
+      </a>
+
+      <!-- Text-to-Speech Reader -->
+      <a href="./Text-to-Speech Reader by Aleksi/" class="card">
+        <img src="./Text-to-Speech Reader by Aleksi/icon.png" alt="Icon" class="card-icon"
+          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdib3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzlkMWQ5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIxIDE2VjhhMiAyIDAgMCAwLTEtMS43M2wtNy00YTIgMiAwIDAgMC0yIDBsLTcgNGEy 2 0 0 0-1 1.73v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16eiI+PC9wYXRoPjwvc3ZnPg=='">
+        <h2 class="card-title">Text-to-Speech Reader by Aleksi</h2>
+        <p class="card-desc">An accessible tool to read long articles or blog posts out loud.</p>
+        <div class="card-footer">View Source <svg viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" fill="none" />
+          </svg></div>
+      </a>
+
+    </div>
+  </div>
+</body>
+
+</html>
