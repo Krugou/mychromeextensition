@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      width: 250px;
+      font-family: sans-serif;
+      padding: 10px;
+      background: #282c34;
+      color: white;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #61dafb;
+      color: #282c34;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 1.2em;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Quick Converter</h3>
+  <input type="number" id="amount" placeholder="Amount" value="1">
+  <select id="fromUnit">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="MILES">Miles</option>
+    <option value="KM">Kilometers</option>
+  </select>
+  <select id="toUnit">
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+    <option value="KM">Kilometers</option>
+    <option value="MILES">Miles</option>
+  </select>
+  <button id="convertBtn">Convert</button>
+  <div id="result">--</div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
